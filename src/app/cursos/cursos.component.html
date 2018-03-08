@@ -1,0 +1,7 @@
+<mz-collection>
+  <mz-collection-item *ngFor="let curso of cursos">
+    {{ curso.nome }}:{{curso.id}}
+    <a routerLink="/cursos/{{curso.id}}" mz-secondary-content><i mz-icon-mdi [icon]="'send'"></i></a>
+  </mz-collection-item>
+</mz-collection>
+<!-- i mz-icon-mdi [icon]="'send'" -->

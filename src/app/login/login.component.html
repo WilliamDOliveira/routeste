@@ -1,0 +1,47 @@
+<h5>
+  Login
+</h5>
+
+<div class="container">
+
+  <div class="row">
+      <mz-input-container>
+        <i mz-icon-mdi mz-input-prefix
+          [icon]="'account'">
+        </i>
+        <input mz-input
+          [label]="'Usuário'"
+          [validate]="true"
+          [dataError]="'Usuário é invalido'"
+          [dataSuccess]="'Usuário é válido'"
+          id="usuario-input"
+          placeholder="Entre com seu usuário"
+          length="100"
+          type="text">
+      </mz-input-container>
+    </div>
+
+  <div class="row">
+    <mz-input-container>
+        <i mz-icon-mdi mz-input-prefix
+          [icon]="'lock'">
+        </i>
+        <input mz-input
+          [label]="'Password'"
+          [validate]="true"
+          [dataError]="'Senha é invalido'"
+          [dataSuccess]="'Senha é válido'"
+          id="password-input"
+          placeholder="Entre com seu email"
+          length="100"
+          type="password">
+      </mz-input-container>
+  </div>
+
+  <div class="row">
+      <button mz-button mz-icon-mdi mz-icon owl="'lock'">
+        button
+      </button>
+  </div>
+
+</div>
