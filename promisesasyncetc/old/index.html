@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+
+        <div id="debug"></div>
+
+        <script>
+            let debug = document.querySelector('#debug');
+            debug.innerHTML = "Iniciando, ainda não executamos a Promisse. 1"
+            
+            let waitForResponse = ( time ) => {
+                debug.innerHTML = "Promisse Iniciada. 2"
+                return new Promise( ( resolve, reject )=>{
+                    if( time > 3001 ){
+                        reject( 'long time' )
+                    }
+                    setTimeout( ()=>{
+                        return resolve("Promisse Iniciada. 2")                        
+                    } , time);
+                } );
+            }
+            waitForResponse( 3000 )
+                .then( (data) => {
+                    debug.innerHTML = 'data ' + data;
+                } )
+                .catch( error => {
+                    debug.innerHTML = 'ERROR ' + error;                    
+                });
+            debug.innerHTML = "Promisse parte 3"            
+        </script>
+        <!-- <script src="app.js"></script>
+        <script src="user.js"></script> -->
+    </body>
+</html>

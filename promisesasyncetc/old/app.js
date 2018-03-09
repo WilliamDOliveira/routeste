@@ -1,0 +1,1 @@
+var user = {'string':'lala'};
