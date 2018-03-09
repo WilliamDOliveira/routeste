@@ -9,8 +9,9 @@
     </mz-navbar-item>
     <mz-navbar-item ><li routerLinkActive="active"><a routerLink="home" >Home</a></mz-navbar-item>
     <mz-navbar-item><li routerLinkActive="active"><a routerLink="login" >Login</a></li></mz-navbar-item>
-    <mz-navbar-item ><li routerLinkActive="active"><a routerLink="cursos" >Cursos</a></mz-navbar-item>
-    <mz-navbar-item ><li routerLinkActive="active"><a [routerLink]="['cursos',idCurso.value]" >Cursos com id</a></mz-navbar-item>
+    <mz-navbar-item><li routerLinkActive="active"><a routerLink="cursos" [queryParams]="{pagina:1}"  >QueryParams</a></li></mz-navbar-item>
+    <!-- <mz-navbar-item ><li routerLinkActive="active"><a routerLink="cursos" >Cursos</a></mz-navbar-item>
+    <mz-navbar-item ><li routerLinkActive="active"><a [routerLink]="['cursos',idCurso.value]" >Cursos com id</a></mz-navbar-item> -->
     <mz-navbar-item ><li routerLinkActive="active"><a routerLink="alunos" >Alunos</a></mz-navbar-item>
   </mz-navbar-item-container>
 </mz-navbar>

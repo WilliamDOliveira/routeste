@@ -29,6 +29,7 @@ import { CursosService } from './services/cursos.service';
 //Modules
 import { CursosModule } from './cursos/cursos.module';
 import { AlunosModule } from './alunos/alunos.module';
+import { AuthService } from './login/auth.service';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { AlunosModule } from './alunos/alunos.module';
 
   ],
   providers: [
-    CursosService
+    CursosService,
+    AuthService
   ],
   bootstrap: [AppComponent]
 })

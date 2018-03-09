@@ -17,7 +17,10 @@
           id="usuario-input"
           placeholder="Entre com seu usuário"
           length="100"
-          type="text">
+          type="text"
+          #nome
+          [(usuario.nome)]
+          >
       </mz-input-container>
     </div>
 
@@ -34,7 +37,10 @@
           id="password-input"
           placeholder="Entre com seu email"
           length="100"
-          type="password">
+          type="password"
+          #senha
+          [(usuario.senha)]
+          >
       </mz-input-container>
   </div>
 

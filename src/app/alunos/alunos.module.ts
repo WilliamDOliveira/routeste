@@ -4,12 +4,17 @@ import { CommonModule } from '@angular/common';
 import { AlunoFormComponent } from './aluno-form/aluno-form.component';
 import { AlunoDetalheComponent } from './aluno-detalhe/aluno-detalhe.component';
 import { AlunosRoutingModule } from './alunos.routing.module';
+import { AlunosService } from '../services/alunos.service';
+import { MzCollectionModule } from 'ng2-materialize'
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
   imports: [
     CommonModule,
-    AlunosRoutingModule
+    AlunosRoutingModule,
+    MzCollectionModule,
+    RouterModule
   ],
   exports: [],
   declarations: [
@@ -17,6 +22,8 @@ import { AlunosRoutingModule } from './alunos.routing.module';
     AlunoFormComponent,
     AlunoDetalheComponent
   ],
-  providers: [],
+  providers: [
+    AlunosService
+  ],
 })
 export class AlunosModule { }

@@ -1,4 +1,15 @@
 <p>
-  alunos works!
+  Lista de Alunos
 </p>
-<router-outlet></router-outlet>
+
+<div class="col-sm-6">
+  <mz-collection>
+    <a mz-collection-link
+    *ngFor="let aluno of alunos"
+    [routerLink]="[aluno.id]">id:{{aluno.id}} | Nome:{{aluno.nome}} | Email:{{aluno.email}}</a>
+  </mz-collection>
+</div>
+
+<div class="col-sm-6">
+  <router-outlet></router-outlet>
+</div>
