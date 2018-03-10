@@ -1,4 +1,4 @@
-import { NgModule } from "@angular/core";
+import { NgModule } from '@angular/core';
 
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
@@ -16,10 +16,10 @@ const APP_ROUTES: Routes = [
 ];
 // export const Routing : ModuleWithProviders = RouterModule.forRoot( APP_ROUTES );
 @NgModule({
-imports:[
+imports: [
   RouterModule.forRoot( APP_ROUTES )
 ],
-exports:[
+exports: [
   RouterModule
 ]
 })

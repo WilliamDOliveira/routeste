@@ -10,7 +10,7 @@ export class LoginComponent implements OnInit {
 
   private usuario: Usuario;
 
-  constructor(private auth: AuthService) { this.fazerLogin() }
+  constructor(private auth: AuthService) { this.fazerLogin(); }
 
   ngOnInit() {
   }

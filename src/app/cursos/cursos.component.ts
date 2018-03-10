@@ -10,8 +10,8 @@ import { ISubscription } from 'rxjs/Subscription';
 })
 export class CursosComponent implements OnInit {
 
-  private cursos:any[];
-  private pagina:number;
+  private cursos: any[];
+  private pagina: number;
   private inscricao: ISubscription;
 
   constructor(
@@ -21,7 +21,7 @@ export class CursosComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.inscricao = this.activatedRoute.queryParams.subscribe( (params:any) => {
+    this.inscricao = this.activatedRoute.queryParams.subscribe( (params: any) => {
       this.pagina = params['pagina'];
     } );
 
@@ -35,7 +35,7 @@ export class CursosComponent implements OnInit {
 
   proxima(){
     // this.pagina++;
-    this.router.navigate(['/cursos'],{queryParams:{'pagina':++this.pagina}});
+    this.router.navigate(['/cursos'], {queryParams: {'pagina': ++this.pagina}});
   }
 
 }

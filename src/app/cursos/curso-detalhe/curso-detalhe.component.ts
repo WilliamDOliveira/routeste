@@ -10,8 +10,8 @@ import { CursosService } from '../../services/cursos.service';
 })
 export class CursoDetalheComponent implements OnInit {
 
-  private id : string;
-  private nome : string;
+  private id: string;
+  private nome: string;
   private inscricao: Subscription;
 
   constructor( private route: ActivatedRoute, private serviceCursos: CursosService) {
