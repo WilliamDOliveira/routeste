@@ -12,24 +12,35 @@ import { AppRoutingModule } from './app.routing.module';
 
 // Angular Materialize | https://sherweb.github.io/ng2-materialize
 // Angular Demo and Import Componentes | https://sherweb.github.io/ng2-materialize/icon
-import  { MzSidenavModule, // sidebar
-          MzNavbarModule, // navbar menu
-          MzCollectionModule, // list
-          MzIconModule,  // icons[1]
-          MzIconMdiModule, // icons[2]
-          MzInputModule,
-          MzButtonModule, //form
-        } from 'ng2-materialize';
+import {
+  MzSidenavModule, // sidebar
+  MzNavbarModule, // navbar menu
+  MzCollectionModule, // list
+  MzIconModule,  // icons[1]
+  MzIconMdiModule, // icons[2]
+  MzInputModule,
+  MzButtonModule, // form
+} from 'ng2-materialize';
 
 // Componentes
 import { SidebarMenuComponent } from './components/sidebar-menu/sidebar-menu.component';
 
 // Services
 import { CursosService } from './services/cursos.service';
-//Modules
+// Modules
 import { CursosModule } from './cursos/cursos.module';
 import { AlunosModule } from './alunos/alunos.module';
 import { AuthService } from './login/auth.service';
+import { FormsModule } from '@angular/forms';
+import { FormControl } from '@angular/forms/src/model';
+import { AuthGuard } from './auth/auth.guard';
+import { CursosGuard } from './auth/cursos.guard';
+import { AlunosGuard } from './auth/alunos.guard';
+import { CompTesteComponent } from './components/comp-teste/comp-teste.component';
+import { LocationComponent } from './components/location/location.component';
+import { MzCardModule } from 'ng2-materialize';
+import { CarouselComponent } from './carousel/carousel.component';
+
 
 @NgModule({
   declarations: [
@@ -38,6 +49,10 @@ import { AuthService } from './login/auth.service';
     LoginComponent,
     SidebarMenuComponent,
     StyleComponent,
+    CompTesteComponent,
+    LocationComponent,
+    CarouselComponent,
+
   ],
   imports: [
     BrowserModule, // Módulo Default [Root]
@@ -50,14 +65,19 @@ import { AuthService } from './login/auth.service';
     MzIconModule,
     MzIconMdiModule,
     MzInputModule,
+    MzCardModule,
     MzButtonModule,
     CursosModule,
-    AlunosModule
+    AlunosModule,
+    FormsModule,
 
   ],
   providers: [
     CursosService,
-    AuthService
+    AuthService,
+    AuthGuard,
+    CursosGuard,
+    AlunosGuard
   ],
   bootstrap: [AppComponent]
 })

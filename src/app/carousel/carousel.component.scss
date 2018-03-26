@@ -1,0 +1,80 @@
+// //slick slider
+
+// // Antes de configurar dots e arrows verifique visibilidade no arquivo javascript de configuração
+
+
+// // Arrows
+// $heightButton: 44px;
+// $borderRadiusButton: 25px;
+// $colorArrow: black;
+// $colorBgArrow: yellow;
+
+// // Formatação
+// .slick-arrow{
+//     width: $heightButton;
+//     height: $heightButton;
+//     border-radius: $borderRadiusButton;
+//     background-color: $colorBgArrow;
+//     font-size: 0;
+//     z-index: 1;
+//     &.slick-prev,
+//     &.slick-next{
+//         position: absolute;
+//         bottom: 50%;
+//         margin-left: 10px;
+//     }
+//     &.slick-next{
+//         right: 0;
+//         margin-right: 10px;
+//     }
+//     &.slick-prev,
+//     &.slick-next{
+//         &::before,
+//         &::after{
+//             content: "";
+//             position: absolute;
+//             width: 2px;
+//             height: 20px;
+//             left: 47%;
+//             background-color: $colorArrow;
+//         }
+//         &::before{
+//             transform: rotate(40deg);
+//             top: 5px;
+//             border-radius: 14px 14px 0 0;
+//         }
+//         &::after{
+//             transform: rotate(-40deg);
+//             bottom: 4px;
+//             border-radius: 0 0 14px 14px;
+//         }
+//     }
+//     &.slick-next{
+//         transform: rotateY(180deg);
+//     }
+
+
+// }
+// // Dots
+// $heightDots: 20px;
+// $borderRadiusDots: 25px;
+// $colorDots: black;
+// $colorBgDots: red;
+// $spaceBetweenDots: 10px;
+// // Dots
+// ul.slick-dots{
+//     list-style: none;
+//     display: flex;
+//     justify-content: center;
+//     li{
+//         display: inline-block;
+//         margin-right: $spaceBetweenDots;
+//         button{
+//             font-size: 0;
+//             width: $heightDots;
+//             height: $heightDots;
+//             background-color: $colorBgDots;
+//             border-radius: $borderRadiusDots;
+//         }
+//     }
+// }

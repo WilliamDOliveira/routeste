@@ -6,7 +6,7 @@ import { AlunoDetalheComponent } from './aluno-detalhe/aluno-detalhe.component';
 import { AlunosRoutingModule } from './alunos.routing.module';
 import { AlunosService } from '../services/alunos.service';
 import { MzCollectionModule } from 'ng2-materialize';
-import { RouterModule } from '@angular/router';
+import { AppRoutingModule } from '../app.routing.module';
 
 
 @NgModule({
@@ -17,9 +17,9 @@ import { RouterModule } from '@angular/router';
   ],
   imports: [
     CommonModule,
-    AlunosRoutingModule,
+    // AlunosRoutingModule,
     MzCollectionModule,
-    RouterModule
+    AppRoutingModule
   ],
   exports: [],
   providers: [

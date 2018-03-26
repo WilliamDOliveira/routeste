@@ -14,11 +14,11 @@ const CURSOS_ROUTES: Routes = [
 
 @NgModule({
   imports: [
-    RouterModule.forChild( CURSOS_ROUTES )
+    RouterModule.forChild(CURSOS_ROUTES)
   ],
   exports: [
     RouterModule
   ]
 })
 
-export class CursosRoutingModule{}
+export class CursosRoutingModule { }

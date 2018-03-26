@@ -1,4 +1,3 @@
-
 <!-- <div style="pointer-events:none;" class="" routerLinkActive="hidden" routerLink="home">index</div> -->
 <mz-navbar>
   <a routerLink="" class="brand-logo">Rotas Ng2</a>
@@ -7,12 +6,38 @@
     <mz-navbar-item>
       <a mz-button id="btn-sidenav-side">Menu</a>
     </mz-navbar-item>
-    <mz-navbar-item ><li routerLinkActive="active"><a routerLink="home" >Home</a></mz-navbar-item>
-    <mz-navbar-item><li routerLinkActive="active"><a routerLink="login" >Login</a></li></mz-navbar-item>
-    <mz-navbar-item><li routerLinkActive="active"><a routerLink="cursos" [queryParams]="{pagina:1}"  >QueryParams</a></li></mz-navbar-item>
-    <!-- <mz-navbar-item ><li routerLinkActive="active"><a routerLink="cursos" >Cursos</a></mz-navbar-item>
-    <mz-navbar-item ><li routerLinkActive="active"><a [routerLink]="['cursos',idCurso.value]" >Cursos com id</a></mz-navbar-item> -->
-    <mz-navbar-item ><li routerLinkActive="active"><a routerLink="alunos" >Alunos</a></mz-navbar-item>
+    <mz-navbar-item>
+      <li routerLinkActive="active">
+        <a routerLink="home">Home</a>
+    </mz-navbar-item>
+    <mz-navbar-item>
+      <li routerLinkActive="active">
+        <a routerLink="login">Login</a>
+      </li>
+    </mz-navbar-item>
+    <span >
+      <!-- <mz-navbar-item *ngIf="mostrarMenu">
+        <li routerLinkActive="active">
+          <a routerLink="cursos" [queryParams]="{pagina:1}">QueryParams</a>
+        </li>
+      </mz-navbar-item> -->
+      <mz-navbar-item>
+        <li routerLinkActive="active">
+          <a routerLink="cursos">Cursos</a>
+      </mz-navbar-item>
+      <!-- <mz-navbar-item>
+        <li routerLinkActive="active">
+          <a [routerLink]="['cursos',idCurso.value]">Cursos com id</a>
+      </mz-navbar-item> -->
+      <mz-navbar-item>
+        <li routerLinkActive="active">
+          <a routerLink="alunos">Alunos</a>
+      </mz-navbar-item>
+      <mz-navbar-item>
+        <li routerLinkActive="active">
+          <a routerLink="carousel">Carousel</a>
+      </mz-navbar-item>
+    </span>
   </mz-navbar-item-container>
 </mz-navbar>
 
@@ -20,7 +45,6 @@
 <sidebar-menu></sidebar-menu>
 
 <div class="container">
-  <input type="number" #idCurso placeholder="Entre com o Id de Cursos detalhes">
+  <!-- <input type="number" #idCurso placeholder="Entre com o Id de Cursos detalhes"> -->
   <router-outlet></router-outlet>
 </div>
-

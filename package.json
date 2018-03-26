@@ -8,7 +8,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "ng lint --fix": "ng lint --fix src/**/*.ts -t verbose"
   },
   "private": true,
   "dependencies": {
@@ -23,9 +24,11 @@
     "@angular/router": "^4.0.0",
     "bootstrap-sass": "^3.3.7",
     "core-js": "^2.4.1",
+    "jquery": "^3.3.1",
     "mdi": "^2.1.19",
     "ng2-materialize": "^1.8.0-beta.0",
     "rxjs": "^5.4.1",
+    "slick-carousel": "^1.8.1",
     "zone.js": "^0.8.14"
   },
   "devDependencies": {
@@ -34,6 +37,7 @@
     "@angular/language-service": "^4.0.0",
     "@types/jasmine": "~2.5.53",
     "@types/jasminewd2": "~2.0.2",
+    "@types/jquery": "^3.3.1",
     "@types/node": "~6.0.60",
     "codelyzer": "~3.0.1",
     "jasmine-core": "~2.6.2",
@@ -47,7 +51,6 @@
     "protractor": "~5.1.2",
     "ts-node": "~3.0.4",
     "tslint": "~5.3.2",
-    "tslint-fix": "^0.1.0",
     "typescript": "~2.3.3"
   }
 }

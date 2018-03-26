@@ -4,46 +4,29 @@
 
 <div class="container">
 
-  <div class="row">
+  <form >
+    <div class="row">
       <mz-input-container>
-        <i mz-icon-mdi mz-input-prefix
-          [icon]="'account'">
+        <i mz-icon-mdi mz-input-prefix [icon]="'account'">
         </i>
-        <input mz-input
-          [label]="'Usuário'"
-          [validate]="true"
-          [dataError]="'Usuário é invalido'"
-          [dataSuccess]="'Usuário é válido'"
-          id="usuario-input"
-          placeholder="Entre com seu usuário"
-          length="100"
-          type="text"
-          >
+        <input mz-input [label]="'Usuário'" [validate]="true" [dataError]="'Usuário é invalido'" [dataSuccess]="'Usuário é válido'"
+          id="usuario-input" placeholder="Entre com seu usuário" length="100" type="text" name="nome" #nome [(ngModel)]="user.nome">
       </mz-input-container>
     </div>
 
-  <div class="row">
-    <mz-input-container>
-        <i mz-icon-mdi mz-input-prefix
-          [icon]="'lock'">
+    <div class="row">
+      <mz-input-container>
+        <i mz-icon-mdi mz-input-prefix [icon]="'lock'">
         </i>
-        <input mz-input
-          [label]="'Password'"
-          [validate]="true"
-          [dataError]="'Senha é invalido'"
-          [dataSuccess]="'Senha é válido'"
-          id="password-input"
-          placeholder="Entre com seu email"
-          length="100"
-          type="password"
-          >
+        <input mz-input [label]="'Password'" [validate]="true" [dataError]="'Senha é invalido'" [dataSuccess]="'Senha é válido'"
+          id="password-input" placeholder="Entre com seu email" length="100" type="password" name="senha" #senha [(ngModel)]="user.senha">
       </mz-input-container>
-  </div>
-
+    </div>
+  </form>
   <div class="row">
-      <button mz-button mz-icon-mdi mz-icon owl="'lock'">
-        button
-      </button>
+    <button mz-button mz-icon-mdi mz-icon owl="'lock'" (click)="onSubmitted($event)">
+      button
+    </button>
   </div>
 
 </div>

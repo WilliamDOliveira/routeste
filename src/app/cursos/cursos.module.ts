@@ -18,7 +18,7 @@ import { MzIconModule, MzIconMdiModule, MzCollectionModule } from 'ng2-materiali
     FormsModule,
     RouterModule,
     // routing cursos
-    CursosRoutingModule,
+    // CursosRoutingModule,
     // materialize
     MzIconModule,
     MzIconMdiModule,

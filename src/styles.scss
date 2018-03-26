@@ -1,0 +1,142 @@
+/* You can add global styles to this file, and also import other style files */
+
+//slick slider
+
+// Antes de configurar dots e arrows verifique visibilidade no arquivo javascript de configuração
+
+$heightSlider: 500px;
+
+ul.slider {
+
+&,li{
+  height: $heightSlider;
+  position: relative;
+}
+
+//Imagens
+li img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+
+// Arrows
+$heightButton: 44px;
+$borderRadiusButton: 25px;
+$colorArrow: black;
+$colorBgArrow: yellow;
+
+// Formatação
+.slick-arrow{
+    width: $heightButton;
+    height: $heightButton;
+    border-radius: $borderRadiusButton;
+    background-color: $colorBgArrow;
+    border: 0;
+    font-size: 0;
+    margin-bottom: -($heightButton/2);
+    z-index: 1;
+    &.slick-prev,
+    &.slick-next{
+        position: absolute;
+        bottom: 50%;
+        margin-left: 10px;
+    }
+    &.slick-next{
+        right: 0;
+        margin-right: 10px;
+    }
+    &.slick-prev,
+    &.slick-next{
+        &::before,
+        &::after{
+            content: "";
+            position: absolute;
+            width: 2px;
+            height: 20px;
+            left: 47%;
+            background-color: $colorArrow;
+        }
+        &::before{
+            transform: rotate(40deg);
+            top: 4px;
+            border-radius: 14px 14px 0 0;
+        }
+        &::after{
+            transform: rotate(-40deg);
+            bottom: 5px;
+            border-radius: 0 0 14px 14px;
+        }
+    }
+    &.slick-next{
+        transform: rotateY(180deg);
+    }
+
+
+}
+// Dots
+$heightDots: 20px;
+$borderRadiusDots: 25px;
+$colorDots: black;
+$colorBgDots: red;
+$spaceBetweenDots: 10px;
+// Dots
+ul.slick-dots{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    li{
+        display: inline-block;
+        margin-right: $spaceBetweenDots;
+        button{
+            font-size: 0;
+            border: 0;
+            width: $heightDots;
+            height: $heightDots;
+            background-color: $colorBgDots;
+            border-radius: $borderRadiusDots;
+        }
+    }
+}
+
+/*
+Exemplo de modelo de slider
+<ul class="slider">
+  <li>
+    <img src="../assets/1.jpg" alt="">
+    <div class="slider-content">
+      Contéudo
+    </div>
+  </li>
+</ul>
+*/
+
+// Para conteudo de texto interno
+.slider-content{
+  position: absolute;
+  width: 100%;
+  bottom: 50%;
+  transform: translateY(50%);
+
+  text-align: center;
+  font-size: 37px;
+  color: #fff;
+
+  opacity: 0;
+}
+.slick-current .slider-content{
+  animation: revealText .6s ease;
+  animation-fill-mode: both;
+}
+@keyframes revealText{
+  0%{ opacity: 0; bottom: 0;}
+  85%{ opacity: 1; bottom: 52%;}
+  100%{ opacity: 1; bottom: 50%;}
+}
+
+}/*FimSlider*/

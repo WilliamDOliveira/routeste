@@ -1,12 +1,23 @@
-import { Component } from '@angular/core';
-import { ActivatedRoute, UrlSegment } from '@angular/router';
-import { ISubscription } from 'rxjs/Subscription';
+import { Component, OnInit } from '@angular/core';
+import { AuthService } from './login/auth.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'App Works';
+  mostrarMenu = false;
+  constructor(
+    private auth: AuthService
+  ) {
+  }
+  ngOnInit() {
+    this.auth.mostrarMenuEmitter
+      .subscribe(mostrar => {
+        console.log('mostrar: ', mostrar);
+        this.mostrarMenu = mostrar;
+      });
+  }
 }

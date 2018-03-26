@@ -19,13 +19,15 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.css",
         "../node_modules/materialize-css/dist/css/materialize.min.css",
         "../node_modules/mdi/css/materialdesignicons.min.css",
-        "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap.scss"
+        "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap.scss",
+        "../node_modules/slick-carousel/slick/slick.scss",
+        "styles.scss"
       ],
       "scripts": [
         "../node_modules/jquery/dist/jquery.min.js",
+        "../node_modules/slick-carousel/slick/slick.js",
         "../node_modules/materialize-css/dist/js/materialize.min.js"
       ],
       "environmentSource": "environments/environment.ts",

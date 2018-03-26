@@ -14,7 +14,7 @@ export class CursoDetalheComponent implements OnInit {
   private nome: string;
   private inscricao: Subscription;
 
-  constructor( private route: ActivatedRoute, private serviceCursos: CursosService) {
+  constructor(private route: ActivatedRoute, private serviceCursos: CursosService) {
   }
 
   // Recupera id da rota e fica escutando
@@ -27,11 +27,12 @@ export class CursoDetalheComponent implements OnInit {
 
     // this.serviceCursos.getCursobyId( 1 )
     // console.log('this.serviceCursos.getCursobyId( 1 ): ', this.serviceCursos.getCursobyId( 1 )[0]['nome']);
-    this.nome = this.serviceCursos.getCursobyId( this.id )[0]['nome'];
 
+    // this.nome = (this.serviceCursos.getCursobyId( this.id )[0]['nome']) ? this.serviceCursos.getCursobyId( this.id )[0]['nome'] : 'PHP';
+    this.nome = 'PHP';
   }
   // Cancela a inscrição quando componente for destruido
-  ngOnDestroy(){
+  ngOnDestroy() {
     this.inscricao.unsubscribe();
   }
 
